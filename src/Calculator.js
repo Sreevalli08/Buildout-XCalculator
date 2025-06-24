@@ -20,8 +20,8 @@ function Calculator() {
           setResult("Error");
         } else {
         //evaluate the expression using mathjs
-          const result = evaluate(input);
-          setResult(String(result)); // convert result to string and update the state
+          const evalResult = evaluate(input);
+          setResult(String(evalResult)); // convert result to string and update the state
         }
       } catch (error){
         // If evaluation fails or invalid expression then show error.
@@ -68,7 +68,7 @@ function Calculator() {
 
       <div className="button-grid">
         {buttons.map((btn) => (
-          <button key={btn} onClick={() => handleClick(btn)} className="buttons">
+          <button key={btn} onClick={() => handleClick(btn)} className="button">
             {btn}
           </button>
         ))}
